@@ -1,0 +1,149 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    ---neutral: 200;
+    --hue-worng: #F39999;
+    --hue-correct: #ABFF86;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    background-image: url("../images/US-citizenship-test-bkg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+
+
+}
+
+.score {
+    cursor: pointer;
+}
+
+.score:hover{
+    color: #5FA9FC;
+}
+
+header{
+    padding: 20px 35px;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100vw;
+    top: 0;
+    background-image: url("../images/US-citizenship-test-bkg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    background-position: 80%;
+    }
+
+.title{
+    font-size: 30px;
+    color: white;
+}
+
+.timer, .score {
+    font-size: 15px;
+    color: white;
+}
+.quiz{
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    
+
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    height: 40vh;
+    background-color: #4D8DD5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.container h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.container p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.btn {
+    border: 1px solid;
+    background-color: #F1F7FE;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #1B5596;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5FA9FC;
+    color: white;
+}
+
+.btn.correct {
+    background-color: lightgreen;
+}
+
+.btn.wrong {
+    background-color: lightcoral;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#question {
+    font-size: 17px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    text-shadow: 2px 2px #ff00;
+    
+}
+
+.hide {
+    display: none;
+}

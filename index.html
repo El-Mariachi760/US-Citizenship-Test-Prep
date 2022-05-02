@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Citizenship Test Prep</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <!-- Section for Highscore link, Title, and Timer -->
+    <header>
+        <Div class="score"><a id="highScores" class="high-scores">High Scores</a></Div>
+        <div class="title">US Citizenship Quiz</div>
+        <time class="timer">Time: <span id="timer"></span></time>
+    </header>
+
+    <!-- Quiz portion -->
+    <section class="quiz">
+
+        <!-- Start Quiz container-->
+        <div id ="start-container" class="container">
+            <h2>Click Start to Begin</h2>
+            <p>Try to answer the question within the time limit. <br><br> Incorrect answers will be penalized by subtracting the time and your score</p>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+            </div>
+        </div>
+
+        <!-- Question continer -->
+        <div hidden id="questions-container" class="container">
+            <div id="question">Question</div>
+            
+            <div id="choice-buttons" class="btn-grid">
+                <button class='btn' id = "choice0"></button>
+                <button class='btn' id = "choice1"></button>
+                <button class='btn' id = "choice2"></button>
+                <button class='btn' id = "choice3"></button>
+            </div>
+            <div id="answer-button"></div>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <!-- <div id="result-div">
+                <hr>
+                <p id="result-text"></p>
+            </div> -->
+        </div>
+
+        <!-- Submit Score Container -->
+        <div hidden id="score-container" class="container">
+            <h2>All Done!</h2>
+            <p>Let's see how you did <span id="score"></span></p>
+            <form class="inline-form" id="submission-form">
+                <label for="initials">Enter initials: </label>
+                <input type="text" id="initials">
+                <button id="submit-btn" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Leaderboard Container -->
+        <div hidden id= "leaderboard" class ="container">
+            <h2>High Scores</h2>
+            <ol id="highscore-list">
+            </ol>
+            <div class="inline-buttons">
+                <button id="back-btn" class="btn">Go Back</button>
+                <button id="clear-btn" class="btn">Clear Highscores</button>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
